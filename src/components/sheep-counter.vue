@@ -1,48 +1,42 @@
 <template>
-  <v-container fill-height>
-    <v-row align="center" justify="center">
-      <h2>{{ msg }}</h2>
-    </v-row>
-    <v-row align="center" justify="center">
-      <h1>{{ count }}</h1>
-    </v-row>
-    <v-row class="sheep-block" align="center" justify="center">
-      <div @click="sheepChange">
-        <img :width="sheepHeight" v-bind:src="require('../assets/images/sheep.png')" />
-      </div>
-    </v-row>
-  </v-container>
+  <div class="box">
+    <b-carousel 
+    class="sheep-carousel"
+    :progress="false" 
+    :arrow="false" 
+    :indicator="false" 
+    :indicator-inside="false" 
+    :pause-info="false"
+    :autoplay="false" 
+    @change="info()">
+    <b-carousel-item v-for="(item, i) in 2" :key="i">
+      <section class="box-custom">
+        <img :src="require('../assets/images/sheep.png')">
+      </section>
+    </b-carousel-item>
+  </b-carousel>
+</div>
 </template>
 
 <script>
 export default {
-  props: {
-    msg: String
+  count: {
+    type: Number,
+    required: true,
   },
   methods: {
-    sheepChange () {
-      this.count++;
-      this.sheepHeight++;
-
-      if (this.sheepHeight > 399) {
-        this.sheepHeight = 300;
-      }
-    },
-  },
-  data () {
-    return {
-      count: 0,
-      sheepHeight: 250,
+    info () {
+      this.$emit('change-count');
     }
-  },
+  }
 }
 </script>
-<style>
-.sheep-block {
-  height: 400px;
-}
 
-h2 {
-  font-size: 30px
+<style>
+.box-custom {
+  height: 256px;
+}
+.sheep-carousel {
+  text-align: center;
 }
 </style>
