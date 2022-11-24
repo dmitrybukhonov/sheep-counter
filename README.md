@@ -1,24 +1,20 @@
-# sheep-counter
+![](https://cdn-icons-png.flaticon.com/512/66/66458.png)
 
-## Project setup
-```
-npm install
-```
+## 🔭 Great game to improve sleep
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Overnight finger workout
+- Improved finger control
+- Rest for the body
+- Velvet Chill
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 🌱 Project setup
 
-### Lints and fixes files
-```
-npm run lint
-```
+- npm install
+- npm run serve
+- npm run build
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 📈 GitHub Stats 
+
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=dmitrybukhonov)](https://github.com/dmitrybukhonov)
+
+❤ by GitHub
