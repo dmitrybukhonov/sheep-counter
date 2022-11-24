@@ -1,11 +1,24 @@
 <template>
-  <v-app>
-    <header></header>
-    <v-main>
-      <SheepCounter msg="Sheep Counter" />
+  <div id="app">
+    <div class="container is-max-widescreen">
+      <b-loading v-model="isLoading"></b-loading>
+      <div class="box">
+        <h1 class="title has-text-centered">Sheep Counter</h1>
+      </div>
+      <div class="box">
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="heading">Count</p>
+              <p class="title">{{ this.count }}</p>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <SheepCounter :count="count" @change-count="changeCount" />
       <FooterBlock />
-    </v-main>
-  </v-app>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -14,10 +27,24 @@ import FooterBlock from './FooterBlock.vue';
 
 export default {
   name: 'App',
+  beforeMount () {
+    this.isLoading = false;
+  },
+  data () {
+    return {
+      count: 0,
+      isLoading: true,
+    }
+  },
   components: {
     SheepCounter,
     FooterBlock,
   },
+  methods: {
+    changeCount () {
+      this.count++;
+    },
+  }
 }
 </script>
 

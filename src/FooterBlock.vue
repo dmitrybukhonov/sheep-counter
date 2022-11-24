@@ -1,20 +1,31 @@
 <template>
-  <v-footer padless>
-    <v-col class="text-center" cols="12">
-      {{ new Date().getFullYear() }}
-      <a v-bind:href="href" target="blank">
-        <v-icon size="24px">
-          mdi-instagram
-        </v-icon>
-      </a>
-    </v-col>
-  </v-footer>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <section>
+        <div class="block">
+          {{ new Date().getFullYear() }}
+          <a :href="linkTelegram" target="_blank">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+          </a>
+          <a :href="linkGithub" target="_blank">
+            <span class="icon">
+              <i class="fa-brands fa-github"></i>
+            </span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </footer>
 </template>
+
 <script>
 export default {
   data () {
     return {
-      href: 'https://www.instagram.com/kramer.dmitry/',
+      linkTelegram: 'https://t.me/dbuhonov',
+      linkGithub: 'https://github.com/dmitrybukhonov',
     }
   },
 }
@@ -22,5 +33,6 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
+  color: #000 !important
 }
 </style>
