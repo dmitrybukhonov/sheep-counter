@@ -9,7 +9,6 @@
         <nav class="level">
           <div class="level-item has-text-centered">
             <div>
-              <p class="heading">Count</p>
               <p class="title">{{ this.count }}</p>
             </div>
           </div>
