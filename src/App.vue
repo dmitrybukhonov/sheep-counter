@@ -3,7 +3,7 @@
     <div class="container is-max-widescreen">
       <b-loading v-model="isLoading"></b-loading>
       <div class="box">
-        <h1 class="title has-text-centered">Sheep Counter</h1>
+        <h1 class="title has-text-centered">Счетчик овец</h1>
       </div>
       <div class="box">
         <nav class="level">
@@ -23,6 +23,7 @@
 <script>
 import SheepCounter from './components/sheep-counter.vue';
 import FooterBlock from './FooterBlock.vue';
+import './style/main.scss';
 
 export default {
   name: 'App',
@@ -33,7 +34,7 @@ export default {
     return {
       count: 0,
       isLoading: true,
-    }
+    };
   },
   components: {
     SheepCounter,
@@ -44,7 +45,7 @@ export default {
       this.count++;
     },
   }
-}
+};
 </script>
 
 
