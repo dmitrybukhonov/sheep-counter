@@ -34,7 +34,7 @@ export default {
     return {
       count: 0,
       isLoading: true,
-    }
+    };
   },
   components: {
     SheepCounter,
@@ -45,7 +45,7 @@ export default {
       this.count++;
     },
   }
-}
+};
 </script>
 
 

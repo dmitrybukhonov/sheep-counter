@@ -22,5 +22,5 @@ export default {
       this.$emit('change-count');
     }
   }
-}
+};
 </script>

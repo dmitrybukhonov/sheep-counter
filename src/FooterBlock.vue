@@ -23,7 +23,7 @@ export default {
     return {
       linkTelegram: 'https://t.me/dbuhonov',
       linkGithub: 'https://github.com/dmitrybukhonov',
-    }
+    };
   },
-}
+};
 </script>
